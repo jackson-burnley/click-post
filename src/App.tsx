@@ -39,8 +39,7 @@ const App: React.FC = () => {
         {comments.map((comment, key) => (
           <PostCard
             key={key}
-            // name="teste"
-            name={users.filter((u) => u.id === comment.userId)}
+            name={users.find((u) => u.id === comment.userId)?.name || "Teste"}
             title={comment.title}
             comment={comment.body}
           />

@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 import { Title, TextTitle } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
 
-export default function Header({}) {
+export default function Header({ navigation: any }) {
   return (
     <Title>
       <View>
@@ -13,7 +13,7 @@ export default function Header({}) {
 
       <AntDesign
         onPress={() => {
-          // navigation.navigate("comment");
+          navigation.navigate("comment");
         }}
         name="plus"
         size={24}
