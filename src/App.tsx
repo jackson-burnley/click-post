@@ -36,21 +36,15 @@ const App: React.FC = () => {
       <View>
         <Header />
 
-        {comments.map((comment) =>
-          users.map((user) => {
-            <PostCard
-              name={comment.id === user.id}
-              title={comment.title}
-              comment={comment.body}
-            />;
-          })
-        )}
-
-        {/* <PostCard name="Artuhr" comment="heyyy" />
-      <PostCard name="Lisa" comment="Feliz dia das mulheres" />
-      <PostCard name="Elton" comment="blabla" />
-      <PostCard name="Arthr" comment="heyyy" />
-      <PostCard name="Arthr" comment="heyyy" /> */}
+        {comments.map((comment, key) => (
+          <PostCard
+            key={key}
+            // name="teste"
+            name={users.filter((u) => u.id === comment.userId)}
+            title={comment.title}
+            comment={comment.body}
+          />
+        ))}
 
         <StatusBar style="auto" />
       </View>

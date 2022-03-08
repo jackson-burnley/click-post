@@ -3,9 +3,7 @@ import { Text, View } from "react-native";
 import { Title, TextTitle } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
 
-interface Props {}
-
-export default function Header({}: Props) {
+export default function Header({}) {
   return (
     <Title>
       <View>
@@ -13,7 +11,14 @@ export default function Header({}: Props) {
         <Text>Deixe sua postagem!</Text>
       </View>
 
-      <AntDesign name="plus" size={24} color="black" />
+      <AntDesign
+        onPress={() => {
+          // navigation.navigate("comment");
+        }}
+        name="plus"
+        size={24}
+        color="black"
+      />
     </Title>
   );
 }
