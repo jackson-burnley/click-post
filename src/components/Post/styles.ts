@@ -15,6 +15,7 @@ export const PostUser = styled.Text`
   font-size: 14px;
   font-weight: bold;
   color: #fff;
+  margin-bottom: 6px;
 `;
 
 export const PostComment = styled.Text`
