@@ -3,9 +3,7 @@ import { View, Text, TextInput, Button } from "react-native";
 import { TextTitle } from "../../components/Header/styles";
 import { Label, SmallInput, LargeInput } from "./styles";
 
-interface Props {}
-
-export default function newComment({}: Props) {
+const NewComment = (props: any) => {
   return (
     <View>
       <TextTitle>Escreva sua postagem</TextTitle>
@@ -16,4 +14,6 @@ export default function newComment({}: Props) {
       <Button title="Submeter" onPress={() => {}} />
     </View>
   );
-}
+};
+
+export default NewComment;

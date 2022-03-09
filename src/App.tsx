@@ -12,13 +12,15 @@ interface Comments {
   body: string;
 }
 
+interface Props {}
+
 interface User {
   id: number;
   name: string;
   email: string;
 }
 
-const App: React.FC = () => {
+const App = (props: any) => {
   const [comments, setComments] = React.useState<Comments[]>([]);
   const [users, setUsers] = React.useState<User[]>([]);
 
@@ -34,7 +36,7 @@ const App: React.FC = () => {
   return (
     <ScrollView>
       <View>
-        <Header />
+        <Header {...props} />
 
         {comments.map((comment, key) => (
           <PostCard
